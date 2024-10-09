@@ -127,28 +127,6 @@ if (record->event.pressed) {
     get_current_wpm();
     break;
 #endif
-#ifdef UNICODE_ENABLE
-  case UC_FLIP: // (ノಠ痊ಠ)ノ彡┻━┻
-    if (record->event.pressed) {
-      //send_unicode_string("(ノಠ痊ಠ)ノ彡┻━┻");
-    }
-    break;
-  case UC_TABL: // ┬─┬ノ( º _ ºノ)
-    if (record->event.pressed) {
-      //send_unicode_string("┬─┬ノ( º _ ºノ)");
-    }
-    break;
-  case UC_SHRG: // ¯\_(ツ)_/¯
-    if (record->event.pressed) {
-      //send_unicode_string("¯\_(ツ)_/¯");
-    }
-    break;
-  case UC_DISA: // ಠ_ಠ
-    if (record->event.pressed) {
-      //send_unicode_string("ಠ_ಠ");
-    }
-    break;
-#endif
   case SL_SHRG:
     if (record->event.pressed) {
       send_string("/shrug");

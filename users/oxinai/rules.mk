@@ -5,6 +5,7 @@ ifeq ($(strip $(QMKRC_ENABLE)), yes)
 	SRC += qmk_rc.c
 	RAW_ENABLE = yes
 endif
+UNICODE_COMMON ?= yes
 UNICODE_ENABLE ?= yes
 KEYLOGGER_ENABLE ?= no
 ifdef CONSOLE_ENABLE

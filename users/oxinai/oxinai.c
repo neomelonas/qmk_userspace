@@ -1,9 +1,5 @@
 #include "oxinai.h"
 
-#ifdef UNICODE_ENABLE
-#include "unicode.h"
-#endif
-
 userspace_config_t userspace_config;
 
 void tap(uint16_t keycode){ register_code(keycode); unregister_code(keycode);  }

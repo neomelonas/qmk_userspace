@@ -40,10 +40,6 @@ enum userspace_custom_keycodes {
   LOCKITM,
   LOCKITW,
   DbZ,               // sends a double zero (00)
-#ifdef UNICODE_ENABLE
-  lcbr,
-  rcbr,
-#endif
   KC_WPM,            // WPM Printer
   UNO,               // whatever my 1 key uno keeb is doing this week
   KEY_TIMER,           // mouse jiggler?
@@ -53,10 +49,6 @@ enum userspace_custom_keycodes {
 
 bool process_record_secrets(uint16_t keycode, keyrecord_t *record);
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
-#ifdef UNICODE_ENABLE
-bool process_record_unicode(uint16_t keycode, keyrecord_t *record);
-#endif
-
 #define XXXXXXX KC_NO
 
 #define KC_RESET RESET

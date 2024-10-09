@@ -24,11 +24,6 @@
 #include "select_word.h"
 #endif
 */
-/*
-#if defined(UNICODEMAP_ENABLE) || defined(UNICODE_ENABLE)
-  #include "send_unicode.h"
-#endif
-*/
 #if defined(TAP_DANCE_ENABLE)
   #include "tap_dances.h"
 #endif
