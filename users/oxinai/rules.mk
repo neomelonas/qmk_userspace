@@ -24,10 +24,7 @@ ifeq ($(strip $(NO_SECRETS)), yes)
     OPT_DEFS += -DNO_SECRETS
 endif
 
-AUTO_CORRECT ?= no
-ifeq ($(strip $(AUTO_CORRECT)), yes)
-	SRC += autocorrection.c
-endif
+AUTOCORRECT_ENABLE ?= yes
 
 CAPS_WORD ?= no
 ifeq ($(strip $(CAPS_WORD)), yes)

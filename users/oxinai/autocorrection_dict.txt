@@ -83,3 +83,5 @@ swtich        -> switch
 thresold      -> threshold
 udpate        -> update
 widht         -> width
+whihc         -> which
+reciept       -> receipt 

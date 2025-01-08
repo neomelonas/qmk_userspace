@@ -43,13 +43,13 @@ enum userspace_layers {
 //  _RGB,
 //  _EMOJI,
 //  _GAMEPAD,
-//  _HITBOX,
+  _HITBOX,
 //  _MACROS,
 //  _MEDIA,
 //  _MOUSE,
-//  _LOWER,
-//  _RAISE,
-//  _ADJUST,
+  _LOWER,
+  _RAISE,
+  _ADJUST,
 };
 
 typedef union {
