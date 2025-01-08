@@ -12,18 +12,14 @@
 #include "qmk_rc.h"
 #endif
 
-#if defined(CAPS_WORD)
-#include "caps_word.h"
-#endif
-
-#if defined(AUTO_CORRECT)
-#include "autocorrection.h"
-#endif
-/*
 #if defined(SELECT_WORD)
 #include "select_word.h"
 #endif
-*/
+
+#if defined(SOCD_ENABLE)
+#include "socd_cleaner.h"
+#endif
+
 #if defined(TAP_DANCE_ENABLE)
   #include "tap_dances.h"
 #endif

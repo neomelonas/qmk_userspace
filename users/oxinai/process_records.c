@@ -4,6 +4,10 @@
 
 uint16_t copy_paste_timer;
 static bool key_trigger = false;
+#ifdef SOCD_ENABLE
+socd_cleaner_t socd_v = {{KC_W, KC_S}, SOCD_CLEANER_LAST};
+socd_cleaner_t socd_h = {{KC_A, KC_D}, SOCD_CLEANER_LAST};
+#endif
 
 __attribute__ ((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
@@ -55,18 +59,39 @@ if (record->event.pressed) {
              record->tap.count
            );
     }
-
 //  uprintf("0x%04X,%u,%u,%u\n", keycode, record->event.key.row, record->event.key.col, get_highest_layer(layer_state));
 #endif //KEYLOGGER_ENABLE
-/*
-#if defined(AUTO_CORRECT)
-  if (!process_autocorrection(keycode, record)) { return false; }
-#endif // Autocorrect
 
-#if defined(CAPS_WORD)
-  if (!process_caps_word(keycode, record)) { return false; }
-#endif // capitalize just a word
-*/
+#ifdef SOCD_ENABLE
+  if (!process_socd_cleaner(keycode, record, &socd_v)) { return false; }
+  if (!process_socd_cleaner(keycode, record, &socd_h)) { return false; }
+
+  switch (keycode) {
+    case SOCDON:  // Turn SOCD Cleaner on.
+      if (record->event.pressed) {
+        socd_cleaner_enabled = true;
+      }
+      return false;
+    case SOCDOFF:  // Turn SOCD Cleaner off.
+      if (record->event.pressed) {
+        socd_cleaner_enabled = false;
+      }
+      return false;
+    case SOCDTOG:  // Toggle SOCD Cleaner.
+      if (record->event.pressed) {
+        socd_cleaner_enabled = !socd_cleaner_enabled;
+      }
+      return false;
+  }
+#endif
+// #ifdef SENCASE_ENABLE
+//   if (!process_sentence_case(keycode, record)) { return false; }
+//     case SC_TOGG:  // Toggle SOCD Cleaner.
+//     if (record->event.pressed) {
+//       sentence_case_toggle();
+//     }
+//     return false;
+// #endif
 
 // If dynamic macros are enabled, use 'em.
 #ifdef DYNMAC_ENABLE
@@ -161,4 +186,3 @@ if (record->event.pressed) {
   return process_record_keymap(keycode, record) &&
   process_record_secrets(keycode, record);
 }
-

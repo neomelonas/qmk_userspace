@@ -1,0 +1,2 @@
+SELECT_WORD = yes
+SOCD_ENABLE = yes

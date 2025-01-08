@@ -26,15 +26,15 @@ endif
 
 AUTOCORRECT_ENABLE ?= yes
 
-CAPS_WORD ?= no
-ifeq ($(strip $(CAPS_WORD)), yes)
-	SRC += caps_word.c
-endif
+CAPS_WORD_ENABLE ?= no
 
 SELECT_WORD ?= no
-ifeq ($(strip $(CAPS_WORD)), yes)
+ifeq ($(strip $(SELECT_WORD)), yes)
 	SRC += select_word.c
 endif
-
+SOCD_ENABLE ?=no
+ifeq ($(strip $(SOCD_ENABLE)), yes)
+	SRC += socd_cleaner.c
+endif
 
 LTO_ENABLE ?= yes

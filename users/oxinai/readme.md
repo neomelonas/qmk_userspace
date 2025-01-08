@@ -1,4 +1,4 @@
-Copyright 2021 Neo Melonas neo@neomelonas.com @neomelonas
+Copyright 2025 Neo Melonas neo@neomelonas.com @neomelonas
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -16,13 +16,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ---
 
 So like half of this is either cribbed from drashna's stuff or others.
-... when in doubt, assume drashna.
+... when in doubt, assume drashna or Pascal Getreuer.
 
-
-
-
-Interesting fun new things cribbed from Pascal Getreuer:
-
-[Autocorrection with QMK](https://getreuer.info/posts/keyboards/autocorrection/index.html)
-
-[QMK: Caps Word](https://getreuer.info/posts/keyboards/caps-word/index.html)
+Interesting fun new things cribbed from Pascal Getreuer, though they keep getting merged into QMK main.
+- [Autocorrection with QMK](https://getreuer.info/posts/keyboards/autocorrection/index.html)
+- [QMK: Caps Word](https://getreuer.info/posts/keyboards/caps-word/index.html)
+- [Word Selection QMK Macro](https://getreuer.info/posts/keyboards/select-word/index.html)
+- [QMK: SOCD Cleaner](https://getreuer.info/posts/keyboards/socd-cleaner/index.html)

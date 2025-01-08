@@ -1,6 +1,5 @@
 #pragma once
 
-
 #ifndef ONESHOT_TAP_TOGGLE
 #define ONESHOT_TAP_TOGGLE 2
 #endif // !ONESHOT_TAP_TOGGLE
@@ -20,4 +19,10 @@
 #define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE, UNICODE_MODE_LINUX
 #endif
 
+#if defined(SENCASE_ENABLE)
+#define SENTENCE_CASE_TIMEOUT 2000  // Reset state after 2 seconds.
+#endif
 
+#if defined(SOCD_ENABLE)
+#define SOCD_STRAT SOCD_CLEANER_LAST  // Set what SOCD Cleaning strat to use (SOCD_CLEANER _LAST, _0_WINS, _1_WINS, _NEUTRAL, _OFF) https://getreuer.info/posts/keyboards/socd-cleaner/index.html#resolution-strategies
+#endif

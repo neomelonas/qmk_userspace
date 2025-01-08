@@ -43,6 +43,11 @@ enum userspace_custom_keycodes {
   KC_WPM,            // WPM Printer
   UNO,               // whatever my 1 key uno keeb is doing this week
   KEY_TIMER,           // mouse jiggler?
+  SELWORD,
+  SOCDON,           // SOCD Stuff
+  SOCDOFF,
+  SOCDTOG,          //END SOCD Stuff
+//  SC_TOGG,          // Sentence Case Toggle
 //  DYNAMIC_MACRO_RANGE,// DYN MACROS
   NEW_SAFE_RANGE     //use "NEWPLACEHOLDER for keymap specific codes
 };
@@ -64,8 +69,8 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
 #define FN_FUNC MO(_FUNC)
 #define KC_FUNC MO(_FUNC)
 
-#define FN_MODS MO(_MODS)
-#define KC_MODS MO(_MODS)
+#define FN_MODS MO(_ADJUST)
+#define KC_MODS MO(_ADJUST)
 
 #define FN_RGBL MO(_RGB)
 #define KC_RGBL MO(_RGB) // RGB Layer Momentary
