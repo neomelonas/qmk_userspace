@@ -3,6 +3,7 @@
     "build_targets": [
         ["converter/ibm_terminal", "oxinai"],
         ["cipulot/ec_660c", "oxinai"],
-        ["mechlovin/mechlovin9/rev2", "oxinai"]
+        ["mechlovin/mechlovin9/rev2", "oxinai"],
+        ["playkbtw/ca66", "oxinai"]
     ]
 }

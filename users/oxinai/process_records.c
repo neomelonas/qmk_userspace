@@ -5,8 +5,8 @@
 uint16_t copy_paste_timer;
 static bool key_trigger = false;
 #ifdef SOCD_ENABLE
-socd_cleaner_t socd_v = {{KC_W, KC_S}, SOCD_CLEANER_LAST};
-socd_cleaner_t socd_h = {{KC_A, KC_D}, SOCD_CLEANER_LAST};
+socd_cleaner_t socd_v = {{KC_W, KC_S}, SOCD_STRAT};
+socd_cleaner_t socd_h = {{KC_A, KC_D}, SOCD_STRAT};
 #endif
 
 __attribute__ ((weak))
@@ -59,7 +59,7 @@ if (record->event.pressed) {
              record->tap.count
            );
     }
-//  uprintf("0x%04X,%u,%u,%u\n", keycode, record->event.key.row, record->event.key.col, get_highest_layer(layer_state));
+    //  uprintf("0x%04X,%u,%u,%u\n", keycode, record->event.key.row, record->event.key.col, get_highest_layer(layer_state));
 #endif //KEYLOGGER_ENABLE
 
 #ifdef SOCD_ENABLE
